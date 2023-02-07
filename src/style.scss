@@ -111,7 +111,7 @@
 
     .Container{
         // border: 1px solid white;
-        // border-radius: 10px;
+        // border-radius: 5px;
         // width: 65%;
         // height: 80%;
         width: 100%;
@@ -274,7 +274,7 @@
 
                         p{
                             background-color: white;
-                            padding: 10px;
+                            padding: 10px 15px;
                             border-radius: 0px 10px 10px 10px;
                             max-width: max-content;
                         }
@@ -342,4 +342,12 @@
         }
 
     }
+}
+.error{
+    color: rgb(125, 39, 39);
+    // background-color: rgb(255, 162, 162);
+    padding: 5px 10px;
+    border-radius: 5px 5px 5px 5px;
+    
+    
 }
