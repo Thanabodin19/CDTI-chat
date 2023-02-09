@@ -171,18 +171,28 @@
             }
 
             .search{
-                border-bottom: 1px solid gray;
+                // border-bottom: 1px solid gray;
+                
 
                 .searchForm{
                     padding: 10px;
+                    
                     input{
                         background-color: transparent;
+                        background-color: var(--navbar);
                         border: none;
                         color: white;
                         outline: none;
+                        font-size: 14px;
+                        width: 90%;
+                        padding: 10px;
+                        border-radius: 30px;
+                        
 
                         &::placeholder{
+                            padding: 0px;
                             color: lightgray;
+                            font-size: 14px;
                         }
                     }
                 }
@@ -220,7 +230,7 @@
             
         }
         .chat{
-            flex: 2;
+            flex: 3;
 
             .chatInfo{
                 height: 50px;
@@ -244,7 +254,7 @@
             .messages{
                 background-color: var(--c2);
                 padding: 10px;
-                height: calc(100% - 160px);
+                height: calc(100% - 150px);
                 overflow: scroll;
 
                 .message{
@@ -302,7 +312,7 @@
             }
 
             .input{
-                height: 50px;
+                height: 40px;
                 background-color: white;
                 padding: 10px;
                 display: flex;
