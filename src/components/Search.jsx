@@ -3,7 +3,7 @@ import { collection, query, where, getDocs, setDoc, doc, updateDoc, serverTimest
 import { db } from "../firebase";
 import { AuthContext } from "../context/AuthContext";
 
-function Search() {
+const Search = () => {
   const [username, setUsername] = useState("");
   const [user, setUser] = useState(null);
   const [err, setErr] = useState(false);
@@ -26,9 +26,8 @@ function Search() {
     };
   };
 
-  const handleKey = e=>{
+  const handleKey = (e) => {
     e.code === "Enter" && handleSearch();
-
   };
 
   const handleSelect = async ()=>{
@@ -42,16 +41,16 @@ function Search() {
 
           if(!res.exists()){
             //create chat in chats collection
-            await setDoc(doc(db,"chats",combinedId),{ messages:[] });
+            await setDoc(doc(db, "chats", combinedId),{ messages:[] });
 
             //create user chats
             await updateDoc(doc(db, "userChats", currentUser.uid),{
               [combinedId+".userInfo"]: {
                 uid: user.uid,
                 displayName: user.displayName,
-                photoURL: user.photoURL
+                photoURL: user.photoURL,
               },
-              [combinedId+".date"]: serverTimestamp()
+              [combinedId+".date"]: serverTimestamp(),
             });
 
             await updateDoc(doc(db, "userChats", user.uid),{
@@ -60,12 +59,12 @@ function Search() {
                 displayName: currentUser.displayName,
                 photoURL: currentUser.photoURL
               },
-              [combinedId+".date"]: serverTimestamp()
+              [combinedId+".date"]: serverTimestamp(),
             });
           }
         }catch(err){}
         setUser(null);
-        setUsername("")
+        setUsername("");
   };
 
   return (
@@ -74,19 +73,20 @@ function Search() {
         <input 
           type="text" 
           placeholder='ค้นหา User' 
-          onKeyDown={handleKey} onChange={(e)=>setUsername(e.target.value)}
+          onKeyDown={handleKey} 
+          onChange={(e)=>setUsername(e.target.value)}
           value = { username }
         />
       </div>
       {err && <span>User not found!</span>}
-      {user && <div className="userChat" onClick={handleSelect}>
+      {user && (<div className="userChat" onClick={handleSelect}>
         <img src={user.photoURL} alt="" />
         <div className="userChatInfo">
         <span>{user.displayName}</span>
         </div>
-      </div>}
+      </div>)}
     </div>
   )
 }
 
-export default Search
+export default Search;

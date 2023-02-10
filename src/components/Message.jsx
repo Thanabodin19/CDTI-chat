@@ -1,19 +1,40 @@
-import React from 'react'
+import React, { useContext, useEffect, useRef } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { ChatContext } from "../context/ChatContext";
 
-function Message() {
+const Message = ({ message }) => {
+  const { currentUser } = useContext(AuthContext);
+  const { data } = useContext(ChatContext);
+
+  const ref = useRef();
+
+  useEffect(() => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  }, [message]);
+
   return (
-    <div className='message owner'>
+    <div
+      ref={ref}
+      className={`message ${message.senderId === currentUser.uid && "owner"}`}
+    >
       <div className="messageInfo">
-        <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745" alt="" />
-        <span>just now</span>
+        <img
+          src={
+            message.senderId === currentUser.uid
+              ? currentUser.photoURL
+              : data.user.photoURL
+          }
+          alt=""
+        />
+        {/* <span>just now</span> */}
+        {/* <p>{currentUser.displayName}</p> */}
       </div>
       <div className="messageContent">
-        <p>hello</p>
-        <img src="https://store.ais.co.th/media/catalog/product/t/h/th-apple_watch_se_lte_40mm_space_gray_aluminum_black_sport_band_pdp_image_position-1.jpg" alt="" />
+        {message.text && <p>{message.text}</p>}
+        {message.img && <img src={message.img} alt="" />}
       </div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default Message
+export default Message;
