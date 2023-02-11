@@ -26,7 +26,7 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        {/* <span>just now</span> */}
+        <span>{message.date.toDate().toLocaleTimeString('en-US')}</span>
         {/* <p>{currentUser.displayName}</p> */}
       </div>
       <div className="messageContent">

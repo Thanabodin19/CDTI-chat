@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import Img from "../img/image.png";
+import Img from "../img/addimg.png";
 // import Attach from "../img/attach.png";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
@@ -94,6 +94,7 @@ const Input = () => {
 
     setText("");
     setImg(null);
+  
   };
   return (
     <div className="input">
