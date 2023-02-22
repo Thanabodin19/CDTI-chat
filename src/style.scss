@@ -90,6 +90,43 @@
                 color: white;
             }
             }
+            select {
+                border: none;
+                outline: none;
+                width: 300px;
+                background-color: rgba(0,0,0,0.3) !important;
+                border-radius: 30px;
+                
+                color: white;
+                display: inline-block;
+                font: inherit;
+                line-height: 1.5em;
+                padding: 0.5em 3.5em 0.5em 1em;
+                margin: 0;      
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                
+            }
+            
+            select.minimal {
+                background-image:
+                  linear-gradient(45deg, transparent 50%, gray 50%),
+                  linear-gradient(135deg, gray 50%, transparent 50%),
+                  linear-gradient(to right, #ccc, #ccc);
+                background-position:
+                  calc(100% - 20px) calc(1em + 2px),
+                  calc(100% - 15px) calc(1em + 2px),
+                  calc(100% - 2.5em) 0.5em;
+                background-size:
+                  5px 5px,
+                  5px 5px,
+                  1px 1.5em;
+                background-repeat: no-repeat;
+            }
 
             button{
                 // background: linear-gradient(30deg,var(--c1),var(--c2));
@@ -138,17 +175,18 @@
     .Container{
         // border: 1px solid white;
         // border-radius: 10px;
-        border-radius: 15px ;
 		background-color: rgba(0,0,0,0.4) !important;
         white-space: nowrap;
-        width: 65%;
-        height: 80%;
-        // width: 100%;
-        // height: 100%;
         display: flex;
         overflow: hidden;
+        // width: 65%;
+        // height: 80%;
+        // border-radius: 15px ;
+        width: 100%;
+        height: 100%;
         @include tablet{
             width: 90%;
+            height: 70%;
         }
         @include mobile{
             width: 100%;
@@ -168,7 +206,7 @@
                 align-items: center;
                 background-color: rgba(0,0,0,0.3) !important;
                 // background-color: var(--navbar);
-                height: 50px;
+                height: 65px;
                 padding: 10px;
                 justify-content: space-between;
                 color: var(--sting);
@@ -227,7 +265,7 @@
                         color: white;
                         outline: none;
                         font-size: 14px;
-                        width: 90%;
+                        width: 100%;
                         padding: 10px;
                         border-radius: 30px;
                         
@@ -277,7 +315,7 @@
             flex: 3;
 
             .chatInfo{
-                height: 50px;
+                height: 65px;
                 background-color: rgba(0,0,0,0.3) !important;
                 // background-color: var(--c_chat);
                 display: flex;
@@ -303,7 +341,7 @@
             .messages{
                 // background-color: var(--c2);
                 padding: 10px;
-                height: calc(100% - 135px);
+                height: calc(100% - 145px);
                 overflow: scroll;
                 
 
@@ -432,11 +470,15 @@
 
     }
 }
-.error{
+.alert {
+    padding: 10px 15px;
+    // background: linear-gradient(to right, #f93e3e, #ff6464, #fa9090);
+    background-color: hsl(356, 100%, 61%);
     color: white;
-    // background-color: rgb(255, 162, 162);
-    padding: 5px 10px;
-    border-radius: 5px 5px 5px 5px;
-    
-    
+    margin-bottom: 5px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
 }
+  
