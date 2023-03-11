@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import Img from "../img/addimg.png";
-// import Attach from "../img/attach.png";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
 import {
@@ -29,7 +28,6 @@ const Input = () => {
 
       uploadTask.on(
         (error) => {
-          //TODO:Handle Error
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
@@ -61,7 +59,6 @@ const Input = () => {
 
       uploadTask.on(
         (error) => {
-          //TODO:Handle Error
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
@@ -105,7 +102,6 @@ const Input = () => {
         value={text}
       />
       <div className="send">
-        {/* <img src={Attach} alt="" /> */}
         <input
           type="file"
           style={{ display: "none" }}

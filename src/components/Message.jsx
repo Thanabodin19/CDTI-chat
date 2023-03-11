@@ -27,7 +27,6 @@ const Message = ({ message }) => {
           alt=""
         />
         <span>{message.date.toDate().toLocaleTimeString('en-US')}</span>
-        {/* <p>{currentUser.displayName}</p> */}
       </div>
       <div className="messageContent">
         {message.text && <p>{message.text}</p>}

@@ -10,7 +10,6 @@ const Register = () =>{
     const [err, setErr] = useState(false);
     const navigate = useNavigate();
 
-
     const handleSubmit = async (e)=>{
         e.preventDefault();
         const displayName = e.target[0].value;
@@ -35,14 +34,12 @@ const Register = () =>{
                             displayName,
                             photoURL: downloadURL,
                         });
-
                         await setDoc(doc(db, "users", res.user.uid), {
                             uid: res.user.uid,
                             displayName,
                             email,
                             photoURL: downloadURL,
                         });
-                        
                         await setDoc(doc(db, "userChats", res.user.uid), {});
                         navigate("/");
                     });
