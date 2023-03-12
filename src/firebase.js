@@ -4,13 +4,14 @@ import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAysYvDM8gQjiovVpiBvQ1G906Cbx2LuC4",
-    authDomain: "cdti-chat.firebaseapp.com",
-    projectId: "cdti-chat",
-    storageBucket: "cdti-chat.appspot.com",
-    messagingSenderId: "624233649875",
-    appId: "1:624233649875:web:5c21aa254187f03dede626"
-  };
+  apiKey: "AIzaSyAqEvzYTfoI5nRrDI3rxFmKy1UhmL39ia0",
+  authDomain: "cdti-chat-3d21b.firebaseapp.com",
+  projectId: "cdti-chat-3d21b",
+  storageBucket: "cdti-chat-3d21b.appspot.com",
+  messagingSenderId: "174271839471",
+  appId: "1:174271839471:web:cbd01e45aa339d6260af1a",
+  measurementId: "G-BPYPM23QV4"
+};
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
