@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 ### `Present Slide`
-link: https://drive.google.com/file/d/1iZybnrTiPCeDYkC9pVPBPdfCNgd45SNv/view?usp=sharing
+link: https://drive.google.com/file/d/14XEzEi-4oCnT5I-UKJsOIltkdGaI-uWP/view?usp=sharing
