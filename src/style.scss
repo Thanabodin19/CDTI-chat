@@ -138,6 +138,12 @@
                 font-size: 14px;
                 background-color: rgba(0,0,0,0.3) !important;
                 border-radius: 30px;
+
+                &:hover{
+                    background: #7F7FD5;
+                    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+                    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+                }
             }
             
 
@@ -473,12 +479,16 @@
 .alert {
     padding: 10px 15px;
     // background: linear-gradient(to right, #f93e3e, #ff6464, #fa9090);
-    background-color: hsl(356, 100%, 61%);
+    background-color: hsla(356, 100%, 65%, 0.9);
     color: white;
     margin-bottom: 5px;
     border-radius: 30px;
     border: none;
     outline: none;
     font-size: 14px;
+}
+.loading{
+    padding: 10px 15px;
+    color: white;
 }
   

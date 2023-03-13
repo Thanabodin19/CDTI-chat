@@ -8,9 +8,11 @@ import { useNavigate, Link } from "react-router-dom";
 
 const Register = () =>{
     const [err, setErr] = useState(false);
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-
+    
     const handleSubmit = async (e)=>{
+        setLoading(true);
         e.preventDefault();
         const displayName = e.target[0].value;
         const email = e.target[1].value;
@@ -47,6 +49,7 @@ const Register = () =>{
             );
         }catch(err){
             setErr(true);
+            setLoading(false);
         }
     }
 
@@ -64,7 +67,8 @@ const Register = () =>{
                         <img src={Add} alt="" />
                         <span>Add an Avatar</span>
                     </label>
-                    <button>Sign up</button>
+                    <button disabled={loading}>Sign up</button>
+                    {loading && <span className="loading">Uploading the image please wait...</span>}
                     {err && <span className="alert alert-danger">Something went wrong</span>}
                 </form>
                 <p>You do have an account? <Link to="/login">Login</Link> </p>
