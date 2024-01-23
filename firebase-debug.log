@@ -1,0 +1,35 @@
+[debug] [2023-03-22T15:35:42.583Z] ----------------------------------------------------------------------
+[debug] [2023-03-22T15:35:42.584Z] Command:       /usr/local/bin/firebase /Users/thanabodinkeawmaha/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2023-03-22T15:35:42.585Z] CLI Version:   11.24.1
+[debug] [2023-03-22T15:35:42.585Z] Platform:      darwin
+[debug] [2023-03-22T15:35:42.585Z] Node Version:  v16.16.0
+[debug] [2023-03-22T15:35:42.586Z] Time:          Wed Mar 22 2023 22:35:42 GMT+0700 (Indochina Time)
+[debug] [2023-03-22T15:35:42.586Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-22T15:35:42.689Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-22T15:35:42.690Z] > authorizing via signed-in user (thanabodin.kea@gmail.com)
+[debug] [2023-03-22T15:35:42.690Z] [iam] checking project cdti-chat-3d21b for permissions ["firebase.projects.get"]
+[debug] [2023-03-22T15:35:42.692Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cdti-chat-3d21b:testIamPermissions [none]
+[debug] [2023-03-22T15:35:42.693Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cdti-chat-3d21b:testIamPermissions x-goog-quota-user=projects/cdti-chat-3d21b
+[debug] [2023-03-22T15:35:42.693Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cdti-chat-3d21b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-03-22T15:35:43.968Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cdti-chat-3d21b:testIamPermissions 200
+[debug] [2023-03-22T15:35:43.972Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cdti-chat-3d21b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-03-22T15:35:43.974Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cdti-chat-3d21b [none]
+[debug] [2023-03-22T15:35:44.588Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cdti-chat-3d21b 200
+[debug] [2023-03-22T15:35:44.592Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cdti-chat-3d21b {"projectId":"cdti-chat-3d21b","projectNumber":"174271839471","displayName":"CDTI-chat","name":"projects/cdti-chat-3d21b","resources":{"hostingSite":"cdti-chat-3d21b","storageBucket":"cdti-chat-3d21b.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_61975578-b57e-4d3c-8af2-22d822f148dc"}
+[info] 
+[info] === Serving from '/Users/thanabodinkeawmaha/Documents/CDTI-Chat'...
+[info] 
+[debug] [2023-03-22T15:35:44.609Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/cdti-chat-3d21b/sites 
+[debug] [2023-03-22T15:35:45.498Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/cdti-chat-3d21b/sites 200
+[debug] [2023-03-22T15:35:45.499Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/cdti-chat-3d21b/sites {"sites":[{"name":"projects/cdti-chat-3d21b/sites/cdti-chat-3d21b","defaultUrl":"https://cdti-chat-3d21b.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-03-22T15:35:45.501Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cdti-chat-3d21b/webApps/-/config [none]
+[debug] [2023-03-22T15:35:46.731Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cdti-chat-3d21b/webApps/-/config 200
+[debug] [2023-03-22T15:35:46.732Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cdti-chat-3d21b/webApps/-/config {"projectId":"cdti-chat-3d21b","appId":"1:174271839471:web:cbd01e45aa339d6260af1a","storageBucket":"cdti-chat-3d21b.appspot.com","locationId":"us-central","apiKey":"AIzaSyAqEvzYTfoI5nRrDI3rxFmKy1UhmL39ia0","authDomain":"cdti-chat-3d21b.firebaseapp.com","messagingSenderId":"174271839471","measurementId":"G-BPYPM23QV4"}
+[debug] [2023-03-22T15:35:46.749Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cdti-chat-3d21b [none]
+[debug] [2023-03-22T15:35:47.481Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cdti-chat-3d21b 200
+[debug] [2023-03-22T15:35:47.482Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cdti-chat-3d21b {"projectId":"cdti-chat-3d21b","projectNumber":"174271839471","displayName":"CDTI-chat","name":"projects/cdti-chat-3d21b","resources":{"hostingSite":"cdti-chat-3d21b","storageBucket":"cdti-chat-3d21b.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_61975578-b57e-4d3c-8af2-22d822f148dc"}
+[info] i  hosting[cdti-chat-3d21b]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting[cdti-chat-3d21b]: Local server: http://localhost:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5002\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [22/Mar/2023:15:35:58 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [22/Mar/2023:15:35:58 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15\""}}
+[info] i  hosting: 127.0.0.1 - - [22/Mar/2023:15:35:58 +0000] "GET /static/css/main.7e65f724.css HTTP/1.1" 200 - "http://localhost:5002/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [22/Mar/2023:15:35:58 +0000] \"GET /static/css/main.7e65f724.css HTTP/1.1\" 200 - \"http://localhost:5002/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15\""}}
