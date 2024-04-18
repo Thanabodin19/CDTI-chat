@@ -242,11 +242,17 @@
                         color: var(--sting);
                         font-size: 10px;
                         border: none;
+                        border-radius: 5px;
                         cursor: pointer;
 
                         @include tablet{
                             // position: absolute;
                             bottom: 10px;
+                        }
+                        &:hover{
+                            background: #7F7FD5;
+                            background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+                            background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
                         }
                     }
                 }
